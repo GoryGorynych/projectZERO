@@ -1,0 +1,62 @@
+group 'enthusiasmdrivendev'
+version '1.0'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'org.codehaus.groovy:groovy-all:2.3.11'
+        compile 'org.slf4j:slf4j-api:1.7.25'
+        compile 'ch.qos.logback:logback-classic:1.2.3'
+        compile 'org.projectlombok:lombok:1.16.16'
+        compile 'org.openjdk.jmh:jmh-core:1.19'
+        compile 'org.openjdk.jmh:jmh-generator-annprocess:1.19'
+
+        testCompile 'junit:junit:4.12'
+    }
+}
+
+project(":data-preparation") {
+}
+
+project(":algorithms") {
+}
+
+project(":benchmark") {
+    dependencies {
+        compile project(":data-preparation")
+        compile project(":algorithms")
+    }
+
+    buildscript {
+        repositories {
+            maven {
+                url "https://plugins.gradle.org/m2/"
+            }
+        }
+        dependencies {
+            classpath "com.github.jengelman.gradle.plugins:shadow:2.0.0"
+        }
+    }
+    apply plugin: "com.github.johnrengelman.shadow"
+}
+
+project(":graph-ics") {
+    dependencies {
+        compile project(":benchmark")
+    }
+}

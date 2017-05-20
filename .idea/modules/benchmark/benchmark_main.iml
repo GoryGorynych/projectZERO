@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":benchmark:main" external.linked.project.path="$MODULE_DIR$/../../../benchmark" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="projectZERO" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../benchmark/build/classes/main" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../benchmark/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../benchmark/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../benchmark/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-all:2.3.11" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" name="Gradle: ch.qos.logback:logback-classic:1.2.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.16" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjdk.jmh:jmh-core:1.19" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjdk.jmh:jmh-generator-annprocess:1.19" level="project" />
+    <orderEntry type="module" module-name="algorithms_main" />
+    <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.2.3" level="project" />
+    <orderEntry type="library" name="Gradle: net.sf.jopt-simple:jopt-simple:4.6" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-math3:3.2" level="project" />
+    <orderEntry type="module" module-name="data-preparation_main" />
+  </component>
+</module>
