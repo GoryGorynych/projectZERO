@@ -2,7 +2,7 @@ package edd.project.ZERO.algorithms.sort;
 
 import edd.project.ZERO.algorithms.Algorithm;
 
-public interface SortAlgorithm extends Algorithm {
+public interface SortAlgorithm<T> extends Algorithm {
 
-    int[] sort(int[] arr);
+    T sort(T arr);
 }

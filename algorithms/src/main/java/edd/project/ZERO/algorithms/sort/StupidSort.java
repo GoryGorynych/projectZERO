@@ -1,6 +1,6 @@
 package edd.project.ZERO.algorithms.sort;
 
-public class StupidSort implements SortAlgorithm {
+public class StupidSort implements SortAlgorithm<int[]> {
 
     @Override
     public int[] sort(int[] arr) {

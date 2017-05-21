@@ -19,4 +19,9 @@ public class ArrayDataProvider implements DataProvider<int[]> {
         }
         return arr;
     }
+
+    @Override
+    public int[] get(int length) {
+        return get(new int[length]);
+    }
 }
