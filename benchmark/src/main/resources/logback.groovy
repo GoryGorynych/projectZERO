@@ -13,4 +13,4 @@ appender("File-Appender", FileAppender) {
     }
 }
 
-root(DEBUG, ["Console-Appender"])
+root(INFO, ["File-Appender"])

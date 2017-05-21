@@ -1,7 +1,6 @@
 package edd.project.ZERO.benchmark.algorithms;
 
 import edd.project.ZERO.data.preparation.ArrayDataProvider;
-import edd.project.ZERO.graphics.read.jmh.JmhBenchmarkSimpleReader;
 import org.openjdk.jmh.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 @State(Scope.Thread)
 public class JavaArraysSortBenchmark {
 
-    private static final Logger log = LoggerFactory.getLogger(JmhBenchmarkSimpleReader.class);
+    private static final Logger log = LoggerFactory.getLogger(JavaArraysSortBenchmark.class);
 
     public int[] arr10;
     public int[] arr50;
@@ -43,11 +42,6 @@ public class JavaArraysSortBenchmark {
         arr50000 = dataPr.get(new int[50000]);;
         arr100000 = dataPr.get(new int[100000]);;
         arr500000 = dataPr.get(new int[500000]);;
-    }
-
-    @TearDown(Level.Trial)
-    public void teardown() {
-        // TODO BenchmarkReader
     }
 
     @Benchmark
