@@ -1,4 +1,4 @@
-package edd.project.ZERO.benchmark.algorithms;
+package edd.project.ZERO.benchmark.sample;
 
 import edd.project.ZERO.data.preparation.ArrayDataProvider;
 import org.openjdk.jmh.annotations.*;
@@ -14,9 +14,9 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 1)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Thread)
-public class JavaArraysSortBenchmark {
+public class BenchmarkSample {
 
-    private static final Logger log = LoggerFactory.getLogger(JavaArraysSortBenchmark.class);
+    private static final Logger log = LoggerFactory.getLogger(BenchmarkSample.class);
 
     public int[] arr10;
     public int[] arr50;
@@ -32,16 +32,16 @@ public class JavaArraysSortBenchmark {
     @Setup(Level.Iteration)
     public void setup() {
         ArrayDataProvider dataPr = new ArrayDataProvider();
-        arr10 = dataPr.get(new int[10]);
-        arr50 = dataPr.get(new int[50]);
-        arr100 = dataPr.get(new int[100]);
-        arr500 = dataPr.get(new int[500]);
-        arr1000 = dataPr.get(new int[1000]);
-        arr5000 = dataPr.get(new int[5000]);
-        arr10000 = dataPr.get(new int[10000]);
-        arr50000 = dataPr.get(new int[50000]);;
-        arr100000 = dataPr.get(new int[100000]);;
-        arr500000 = dataPr.get(new int[500000]);;
+        arr10 = dataPr.get(10);
+        arr50 = dataPr.get(50);
+        arr100 = dataPr.get(100);
+        arr500 = dataPr.get(500);
+        arr1000 = dataPr.get(1000);
+        arr5000 = dataPr.get(5000);
+        arr10000 = dataPr.get(10000);
+        arr50000 = dataPr.get(50000);
+        arr100000 = dataPr.get(100000);
+        arr500000 = dataPr.get(500000);
     }
 
     @Benchmark

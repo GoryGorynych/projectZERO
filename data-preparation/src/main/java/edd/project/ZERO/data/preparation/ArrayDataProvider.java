@@ -11,17 +11,13 @@ public class ArrayDataProvider implements DataProvider<int[]> {
     }
 
     @Override
-    public int[] get(int[] arr) {
+    public int[] get(int length) {
         int min = 0;
-        int max = arr.length;
-        for (int i = 0; i < arr.length; i++) {
+        int max = length * 2;
+        int[] arr = new int[length];
+        for (int i = 0; i < length; i++) {
             arr[i] = rand.nextInt(max - min + 1) + min;
         }
         return arr;
-    }
-
-    @Override
-    public int[] get(int length) {
-        return get(new int[length]);
     }
 }
