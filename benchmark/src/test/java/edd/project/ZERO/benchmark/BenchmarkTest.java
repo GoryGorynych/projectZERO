@@ -7,6 +7,8 @@ import org.junit.Test;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.RunnerException;
 
+import java.util.concurrent.TimeUnit;
+
 @State(Scope.Benchmark)
 public class BenchmarkTest {
 
@@ -24,7 +26,16 @@ public class BenchmarkTest {
 
     @Test
     public void testJavaArraysSortBenchmark() throws RunnerException {
-        runner.runBenchmark(this.getClass().getSimpleName(), "benchmarkTest", 1, 1, 1);
+        BenchmarkOpts opts = BenchmarkOpts.builder()
+                .warmupIterations(1)
+                .measurementIterations(1)
+                .forks(1)
+                .timeUnit(TimeUnit.MILLISECONDS)
+                .className(getClass().getSimpleName())
+                .methodName("benchmarkTest")
+                .build();
+
+        runner.runBenchmark(opts);
 
         // TODO analyze & print result
     }

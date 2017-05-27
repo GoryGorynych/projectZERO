@@ -14,9 +14,9 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 1)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Thread)
-public class BenchmarkSample {
+public class LegacyBenchmarkSample {
 
-    private static final Logger log = LoggerFactory.getLogger(BenchmarkSample.class);
+    private static final Logger log = LoggerFactory.getLogger(LegacyBenchmarkSample.class);
 
     public int[] arr10;
     public int[] arr50;
