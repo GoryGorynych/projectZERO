@@ -21,7 +21,7 @@ public class BenchmarkTest {
 
     @Setup(Level.Iteration)
     public void setupPrepare(BenchmarkUnit unit) {
-        unit.init(new StupidArrayDataProvider(), new GoldenSort());
+        unit.forIteration(new GoldenSort(), new StupidArrayDataProvider().get(1000));
     }
 
     @Test
@@ -42,6 +42,6 @@ public class BenchmarkTest {
 
     @Benchmark
     public void benchmarkTest(BenchmarkUnit unit) {
-        unit.getAlgorithm().sort(unit.prepareData(1000));
+        unit.getAlgorithm().sort(unit.getData());
     }
 }
