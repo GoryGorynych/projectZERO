@@ -5,12 +5,5 @@ appender("Console-Appender", ConsoleAppender) {
         pattern = "%msg%n"
     }
 }
-appender("File-Appender", FileAppender) {
-    file = "${LOG_PATH}/logfile.log"
-    encoder(PatternLayoutEncoder) {
-        pattern = "%msg%n"
-        outputPatternAsHeader = true
-    }
-}
 
 root(INFO, ["File-Appender"])

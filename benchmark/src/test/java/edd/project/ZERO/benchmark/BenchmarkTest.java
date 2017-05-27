@@ -1,7 +1,7 @@
 package edd.project.ZERO.benchmark;
 
 import edd.project.ZERO.algorithms.sort.GoldenSort;
-import edd.project.ZERO.data.preparation.ArrayDataProvider;
+import edd.project.ZERO.data.preparation.StupidArrayDataProvider;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openjdk.jmh.annotations.*;
@@ -19,7 +19,7 @@ public class BenchmarkTest {
 
     @Setup(Level.Iteration)
     public void setupPrepare(BenchmarkUnit unit) {
-        unit.init(new ArrayDataProvider(), new GoldenSort());
+        unit.init(new StupidArrayDataProvider(), new GoldenSort());
     }
 
     @Test

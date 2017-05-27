@@ -1,6 +1,6 @@
 package edd.project.ZERO.benchmark.sample;
 
-import edd.project.ZERO.data.preparation.ArrayDataProvider;
+import edd.project.ZERO.data.preparation.StupidArrayDataProvider;
 import org.openjdk.jmh.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +31,7 @@ public class BenchmarkSample {
 
     @Setup(Level.Iteration)
     public void setup() {
-        ArrayDataProvider dataPr = new ArrayDataProvider();
+        StupidArrayDataProvider dataPr = new StupidArrayDataProvider();
         arr10 = dataPr.get(10);
         arr50 = dataPr.get(50);
         arr100 = dataPr.get(100);
